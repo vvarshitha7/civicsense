@@ -1,0 +1,52 @@
+{
+	"name": "gpt-engineer",
+	"version": "0.0.5",
+	"license": "MIT",
+	"bin": "dist/cli.js",
+	"type": "module",
+	"engines": {
+		"node": ">=20"
+	},
+	"scripts": {
+		"build": "tsc",
+		"te": "tsc source/test.ts",
+		"dev": "tsc --watch",
+		"fmt": "prettier --write .",
+		"test": "node --test ./dist/tests/"
+	},
+	"files": [
+		"dist"
+	],
+	"dependencies": {
+		"@dqbd/tiktoken": "^1.0.7",
+		"@inquirer/confirm": "^2.0.7",
+		"date-fns": "^2.30.0",
+		"fs-extra": "^11.1.1",
+		"inquirer": "^9.2.8",
+		"langchain": "^0.0.121",
+		"mkdirp": "^3.0.1",
+		"openai": "^3.3.0"
+	},
+	"devDependencies": {
+		"@sindresorhus/tsconfig": "^3.0.1",
+		"@types/fs-extra": "^11.0.1",
+		"@types/inquirer": "^9.0.3",
+		"@vdemedes/prettier-config": "^2.0.1",
+		"chalk": "^5.3.0",
+		"eslint-config-xo-react": "^0.27.0",
+		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"prettier": "^2.8.7",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.1.6",
+		"xo": "^0.53.1"
+	},
+	"xo": {
+		"extends": "xo-react",
+		"prettier": true,
+		"rules": {
+			"react/prop-types": "off"
+		}
+	},
+	"prettier": "@vdemedes/prettier-config"
+}
